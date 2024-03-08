@@ -139,5 +139,18 @@
         </div>
     </a>
     <footer><p>Made by PraPra123 ©</p></footer>
+    <script>
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|iOS|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            document.addEventListener('DOMContentLoaded', function () {
+                var mobileMessage = document.createElement('div');
+                mobileMessage.style.fontSize = '20px';
+                mobileMessage.style.textAlign = 'center';
+                mobileMessage.style.padding = '20px';
+                mobileMessage.style.backgroundColor = '#f2f2f2';
+                mobileMessage.innerHTML = 'Sorry, this website is designed to be viewed from a computer only.';
+                document.body.appendChild(mobileMessage);
+            });
+        }
+    </script>
 </body>
 </html>
