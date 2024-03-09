@@ -114,6 +114,17 @@
         font-family: Arial;
         font-size: 13px;
     }
+    
+    .hidden-on-mobile {
+        display: none;
+    }
+
+    .mobile-message {
+        font-size: 20px;
+        text-align: center;
+        padding: 20px;
+        background-color: #f2f2f2;
+    }
 </style>
 <body>
     <header>
@@ -140,16 +151,8 @@
     </a>
     <footer><p>Made by PraPra123 ©</p></footer>
     <script>
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|iOS|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            document.addEventListener('DOMContentLoaded', function () {
-                var mobileMessage = document.createElement('div');
-                mobileMessage.style.fontSize = '20px';
-                mobileMessage.style.textAlign = 'center';
-                mobileMessage.style.padding = '20px';
-                mobileMessage.style.backgroundColor = '#f2f2f2';
-                mobileMessage.innerHTML = 'Sorry, this website is designed to be viewed from a computer only.';
-                document.body.appendChild(mobileMessage);
-            });
+        if (/Android|webOS|iPhone|iPad|iPod|iOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            window.location.href = "if_useragent_mobile/mobile.html";
         }
     </script>
 </body>
